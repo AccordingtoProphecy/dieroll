@@ -11,20 +11,26 @@ public class dieroll {
         System.out.println("D4 [4], D6 [6], D8 [8], D10 [10], D12 [12], D20 [20]");
         int input = s.nextInt();
 
-        if (input == 4) {
-            die.d4();
-        } else if (input == 6) {
-            die.d6();
-        } else if (input == 8) {
-            die.d8();
-        } else if (input == 10) {
-            die.d10();
-        } else if (input == 12) {
-            die.d12();
-        } else if (input == 20) {
-            die.d20();
-        } else {
-            System.out.println("That is not a valid input");
+        switch(input) {
+            case 4:
+                die.d4();
+                break;
+            case 6:
+                die.d6();
+                break;
+            case 8:
+                die.d8();
+                break;
+            case 10:
+                die.d10();
+                break;
+            case 12:
+                die.d12();
+                break;
+            case 20:
+                die.d20();
+            default:
+                System.out.println("That is not a valid input");
         }
         s.close();
     }
